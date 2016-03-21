@@ -1,0 +1,112 @@
+* { margin:0; padding:0; box-sizing:border-box;
+}
+body{
+	font-size: 16px;
+	color: #333;
+	text-align: center;
+}
+h1{
+	font-size: 2.5em;
+	color: #F7F4ED;
+	background: #333;
+	height: 2.5em;
+	padding: .6em 0;
+	margin-bottom: 1em;
+	border-bottom: solid .25em #DE667D;
+}
+#header p{
+	text-align: right;
+	width: 70%;
+	padding: .5em 0;
+}
+#all-questions{
+	margin: 0 auto;
+	width: 40%;
+	padding: 10em 0;
+	background-image: url("../images/fashion.jpg");
+	background-repeat: none;
+	background-size: cover;
+}
+h2{
+	background: rgba(247, 244, 237, .9);
+	padding: .75em 0;
+	font-size: 1.75em;
+}
+#second-question,
+#third-question,
+#fourth-question,
+#fifth-question{
+	display: none;
+}
+#second-question-answers,
+#third-question-answers,
+#fourth-question-answers,
+#fifth-question-answers{
+	display: none;
+}
+.answers{
+	width: 40%;
+	margin: 0 auto;
+	margin-top: 1em;
+}
+li{
+	background: #F7F4ED;
+	font-size: 1.5em;
+	padding: .5em;
+  	list-style-position: inside;
+  	text-align: left;
+}
+li:before {
+	content: "";
+	padding-left: 1em;
+}
+li:nth-child(odd) {
+	background-color: #EBE3D7;
+}
+li:hover{
+	background-color: #DE667D;
+}
+footer{
+	color: #F7F4ED;
+	background: #333;
+	height: 2.5eem;
+	padding: .6em 0;
+	margin-top: 4em;
+	border-top: solid .25em #DE667D;
+}
+
+/*media queries*/
+@media only screen and (max-width: 1010px){
+	#all-questions{
+		width: 70%;
+	}
+	#header p{
+	width: 85%;
+	}
+	.answers{
+		width: 70%;
+	}
+}
+@media only screen and (max-width: 550px){
+	h1{
+		font-size: 1.5em;
+	}
+	h2{
+		font-size: 1.25em;
+	}
+	li{
+		font-size: 1.25em;
+	}
+	#all-questions{
+		width: 90%;
+	}
+	#header p{
+	width: 95%;
+	}
+	.answers{
+		width: 90%;
+	}
+	footer{
+		margin-top: 2em;
+	}
+}
