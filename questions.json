@@ -1,0 +1,29 @@
+{
+	"questions": [
+	{
+		"question": "What does prêt-à-porter mean?",
+		"options": ["High Fashion", "Ready to Wear", "Fast Fashion", "Made to Order"],
+		"answerIndex": 1
+	},
+	{
+		"question": "Which designer is famous for the wrap dress?",
+		"options": ["Nina Ricci", "Cynthia Rowley", "Diane Von Furstenberg", "Nanette Lepore"],
+		"answerIndex": 2
+	},
+	{
+		"question": "Who designed the cone bra that Madonna wore?",
+		"options": ["Jean Paul Gaultier", "Pierre Cardin", "Vivienne Westwood", "Martin Margiela"],
+		"answerIndex": 0
+	},
+	{
+		"question": "Who is the current designer for Chanel?",
+		"options": ["Helmut Lang", "Karl Lagerfeld", "Alexander Wang", "Raf Simons"],
+		"answerIndex": 1
+	}
+	{
+		"question": "Who invented the LBD?",
+		"options": ["Karl Lagerfeld", "Elsa Schiaparelli", "Donna Karen", "Coco Chanel"],
+		"answerIndex": 3
+	}
+	]
+}
