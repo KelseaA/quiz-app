@@ -37,9 +37,11 @@ function showNextQuestion(){
 function showAnswer(correct){
 	if(correct){
 		$(".pop-up").removeClass("pop-up-incorrect").addClass("pop-up-correct");
+		$(".answer-feedback").text("Correct!");
 	}
 	else{
 		$(".pop-up").removeClass("pop-up-correct").addClass("pop-up-incorrect");
+		$(".answer-feedback").text("Incorrect!");
 	}
 	$("body").addClass("pop-up-open");
 	$(".pop-up").fadeIn();
@@ -68,5 +70,9 @@ function showUserScore(){
 // event listener to enable user to click on answer options
 $(".question-answers").on("click", ".answer-list", function(){
 	showAnswer($(this).data("correct-answer"));
+	console.log("You clicked this");
+})
+$(".pop-up").on("click", ".continue", function(){
+	showNextQuestion();
 	console.log("You clicked this");
 })

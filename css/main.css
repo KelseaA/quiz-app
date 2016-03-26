@@ -14,6 +14,23 @@ body{
 	position: fixed;
 	display: none;
 }
+.pop-up p{
+	font-size: 3em;
+	padding-top: 6em;
+	margin-bottom: 1em;
+/*	display: none;*/
+}
+.pop-up button{
+	border: none;
+	background-color: #EBE3D7;
+	font-size: 1.25em;
+	padding: .75em;
+	border-radius: 25px;
+/*	display: none;*/
+}
+.pop-up button:hover{
+	background-color: #DE667D;
+}
 .pop-up-correct{
 	background-color: green;
 }
