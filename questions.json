@@ -3,27 +3,32 @@
 	{
 		"question": "What does prêt-à-porter mean?",
 		"options": ["High Fashion", "Ready to Wear", "Fast Fashion", "Made to Order"],
-		"answerIndex": 1
+		"answerIndex": 1,
+		"info": "Prêt-à-porter is French term for ready to wear, the term for factory made clothing that needs little to no alterations."
 	},
 	{
 		"question": "Which designer is famous for the wrap dress?",
 		"options": ["Nina Ricci", "Cynthia Rowley", "Diane Von Furstenberg", "Nanette Lepore"],
-		"answerIndex": 2
+		"answerIndex": 2,
+		"info": "Diane von Furstenberg first introduced the knitted jersey wrap dress in 1974."
 	},
 	{
 		"question": "Who designed the cone bra that Madonna wore?",
 		"options": ["Jean Paul Gaultier", "Pierre Cardin", "Vivienne Westwood", "Martin Margiela"],
-		"answerIndex": 0
+		"answerIndex": 0,
+		"info": "Gaultier produced many costumes for Madonna during the nineties, starting with her infamous cone bra for her 1990 Blond Ambition World Tour."
 	},
 	{
 		"question": "Who is the current designer for Chanel?",
 		"options": ["Helmut Lang", "Karl Lagerfeld", "Alexander Wang", "Raf Simons"],
-		"answerIndex": 1
+		"answerIndex": 1,
+		"info": "Lagerfeld has designed for Chanel since 1983."
 	},
 	{
 		"question": "Who invented the LBD?",
 		"options": ["Karl Lagerfeld", "Elsa Schiaparelli", "Donna Karen", "Coco Chanel"],
-		"answerIndex": 3
+		"answerIndex": 3,
+		"info": "After the jersey suit, the concept of the little black dress is often cited as a Chanel contribution to the fashion lexicon."
 	}
 	]
 }

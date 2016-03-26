@@ -1,4 +1,9 @@
-* { margin:0; padding:0; box-sizing:border-box;
+* { 
+	margin:0; padding:0; box-sizing:border-box;
+}
+html {
+	overflow: -moz-scrollbars-vertical; 
+	overflow-y: scroll;
 }
 body{
 	font-size: 16px;
@@ -13,29 +18,26 @@ body{
 	height: 100%;
 	position: fixed;
 	display: none;
+	background-color: #fff;
 }
-.pop-up p{
+.answer-feedback{
 	font-size: 3em;
-	padding-top: 6em;
+	padding-top: 5.5em;
 	margin-bottom: 1em;
-/*	display: none;*/
 }
-.pop-up button{
+.question-info{
+	font-size: 1.25em;
+	margin-bottom: 2em;
+}
+.continue{
 	border: none;
 	background-color: #EBE3D7;
 	font-size: 1.25em;
 	padding: .75em;
 	border-radius: 25px;
-/*	display: none;*/
 }
-.pop-up button:hover{
+.continue:hover{
 	background-color: #DE667D;
-}
-.pop-up-correct{
-	background-color: green;
-}
-.pop-up-incorrect{
-	background-color: red;
 }
 h1{
 	font-size: 2.5em;
@@ -46,10 +48,11 @@ h1{
 	margin-bottom: 1em;
 	border-bottom: solid .25em #DE667D;
 }
-.header p{
-	text-align: right;
-	width: 70%;
-	padding: .5em 0;
+.number-counter {
+    text-align: right;
+    width: 40%;
+    padding: .25em 0;
+    margin-left: 26.5em;
 }
 .all-questions{
 	margin: 0 auto;
@@ -91,7 +94,7 @@ footer{
 	background: #333;
 	height: 2.5em;
 	padding: .6em 0;
-	margin-top: 4em;
+	margin-top: 3em;
 	border-top: solid .25em #DE667D;
 }
 .score{
@@ -100,22 +103,20 @@ footer{
 	margin: 0 auto;
 	display: none;
 }
-.score p{
+.congrats-message, .user-score{
 	font-size: 2em;
-	padding-top: 3em;
+	padding-top: 1.5em;
 	margin-bottom: .75em;
-	display: none;
 }
-.score button{
+.restart-quiz{
 	border: none;
 	background-color: #EBE3D7;
 	font-size: 1.25em;
 	padding: .75em;
 	border-radius: 25px;
-	margin-bottom: 3em;
-	display: none;
+	margin-bottom: 4em;
 }
-.score button:hover{
+.restart-quiz:hover{
 	background-color: #DE667D;
 }
 .pointer
