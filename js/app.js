@@ -23,16 +23,19 @@ function startQuiz(){
 	$(".all-answers").show();
 	$(".all-questions").show();
 	$(".score").hide();
-	$(".number-counter").show();
+	$(".number-counter-wrapper").show();
 	showNextQuestion();
 }
 // gets next question of quiz
 function showNextQuestion(){
-	$(".pop-up").fadeOut();
 	if(nextQuestionIndex < questions.length){
-		showQuestions(questions[nextQuestionIndex].question, questions[nextQuestionIndex].options, questions[nextQuestionIndex].answerIndex, questions[nextQuestionIndex].info);
+		var questionInfo = questions[nextQuestionIndex].info;
+		$(".pop-up").fadeOut("slow", function(){
+			$(".question-info").html(questionInfo);
+		});
+		showQuestions(questions[nextQuestionIndex].question, questions[nextQuestionIndex].options, questions[nextQuestionIndex].answerIndex);
 		nextQuestionIndex++;
-		$(".header p").html("<p>Question " + questionCounter + " of 5</p>");
+		$(".number-counter").html("<p>Question " + questionCounter + " of 5</p>");
 		questionCounter++;
 	}
 	else{
@@ -54,10 +57,9 @@ function showAnswer(correct){
 	$(".pop-up").fadeIn();
 }
 // shows questions on page
-function showQuestions(question, options, answerIndex, info){
+function showQuestions(question, options, answerIndex){
 	$(".question-title").html(question);
 	$(".question-answers").empty();
-	$(".question-info").html(info);
 	for(var i = 0; i < options.length; i++){
 		var correctAnswer = false;
 		if(i == answerIndex){
@@ -68,22 +70,20 @@ function showQuestions(question, options, answerIndex, info){
 }
 // shows user's score after quiz is finished
 function showUserScore(){
+	$(".pop-up").hide();
 	$(".all-answers").hide();
 	$(".all-questions").hide();
 	$(".user-score").html("<p>Your score is: " + score + " out of 5</p");
 	$(".score").fadeIn();
-	$(".number-counter").hide();
+	$(".number-counter-wrapper").hide();
 }
 // event listener to enable user to click on answer options
 $(".question-answers").on("click", ".answer-list", function(){
 	showAnswer($(this).data("correct-answer"));
-	console.log($(this).data("correct-answer"));
-	console.log("You clicked this");
 })
 // event listener for click on correct/incorrect screen continue button 
 $(".pop-up").on("click", ".continue", function(){
 	showNextQuestion();
-	console.log("You clicked this");
 })
 // event listener for click on restart quiz button at end of quiz
 $(".score").on("click", ".restart-quiz", function(){

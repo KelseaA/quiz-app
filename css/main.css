@@ -9,6 +9,7 @@ body{
 	font-size: 16px;
 	color: #333;
 	text-align: center;
+	line-height: 1.75em;
 }
 .pop-up-open{
 	overflow: hidden;
@@ -27,7 +28,6 @@ body{
 }
 .question-info{
 	font-size: 1.25em;
-	margin-bottom: 2em;
 }
 .continue{
 	border: none;
@@ -35,6 +35,7 @@ body{
 	font-size: 1.25em;
 	padding: .75em;
 	border-radius: 25px;
+	margin-top: 2em;
 }
 .continue:hover{
 	background-color: #DE667D;
@@ -48,11 +49,12 @@ h1{
 	margin-bottom: 1em;
 	border-bottom: solid .25em #DE667D;
 }
+.number-counter-wrapper{
+	width: 40%;
+	margin: 0 auto;
+}
 .number-counter {
     text-align: right;
-    width: 40%;
-    padding: .25em 0;
-    margin-left: 26.5em;
 }
 .all-questions{
 	margin: 0 auto;
@@ -131,36 +133,25 @@ footer{
 
 /*media queries*/
 @media only screen and (max-width: 1010px){
-	#all-questions{
+	.all-questions, .number-counter-wrapper, .question-answers, .question-info{
 		width: 70%;
-	}
-	.header p{
-	width: 85%;
-	}
-	.question-answers{
-		width: 70%;
+		margin: 0 auto;
 	}
 }
 @media only screen and (max-width: 550px){
 	h1{
 		font-size: 1.5em;
 	}
-	h2{
+	h2, li{
 		font-size: 1.25em;
 	}
-	li{
-		font-size: 1.25em;
-	}
-	.all-questions{
-		width: 90%;
-	}
-	.header p{
-	width: 95%;
-	}
-	.question-answers{
+	.all-questions, .number-counter-wrapper, .question-answers, .question-info{
 		width: 90%;
 	}
 	footer{
 		margin-top: 2em;
+	}
+	.score{
+		width: 100%;
 	}
 }
