@@ -20,21 +20,19 @@ function startQuiz(){
 	nextQuestionIndex = 0;
 	score = 0;
 	questionCounter = 1;
-	$(".all-answers").show();
-	$(".all-questions").show();
+	$(".answer-box").hide();
 	$(".score").hide();
+	$(".wrapper").show();
 	$(".number-counter-wrapper").show();
 	showNextQuestion();
 }
 // gets next question of quiz
 function showNextQuestion(){
+	$(".wrapper").show();
+	$(".answer-box").hide();
+	
 	if(nextQuestionIndex < questions.length){
-		var questionInfo = questions[nextQuestionIndex].info;
-		$(".pop-up").fadeOut("slow", function(){
-			$(".question-info").html(questionInfo);
-		});
 		showQuestions(questions[nextQuestionIndex].question, questions[nextQuestionIndex].options, questions[nextQuestionIndex].answerIndex);
-		nextQuestionIndex++;
 		$(".number-counter").html("<p>Question " + questionCounter + " of 5</p>");
 		questionCounter++;
 	}
@@ -44,45 +42,61 @@ function showNextQuestion(){
 }
 // gives feedback on answer choice - correct or incorrect
 function showAnswer(correct){
+	//sets answer image
+	var answerImageSrc = questions[nextQuestionIndex].answerImage;
+	$(".answer-image").attr("src", answerImageSrc);
+
 	if(correct){
-		$(".pop-up").removeClass("pop-up-incorrect").addClass("pop-up-correct");
+		$(".answer-box").removeClass("answer-box-incorrect").addClass("answer-box-correct");
 		$(".answer-feedback").text("Correct!");
 		score++;
 	}
 	else{
-		$(".pop-up").removeClass("pop-up-correct").addClass("pop-up-incorrect");
+		$(".answer-box").removeClass("answer-box-correct").addClass("answer-box-incorrect");
 		$(".answer-feedback").text("Incorrect!");
 	}
-	$("body").addClass("pop-up-open");
-	$(".pop-up").fadeIn();
+
+	nextQuestionIndex++;
+	
+	var questionInfo = questions[nextQuestionIndex].info;
+	$(".answer-info").html(questionInfo);
+
+	$(".wrapper").hide();
+	$(".answer-box").show();
 }
 // shows questions on page
 function showQuestions(question, options, answerIndex){
+	//sets question
 	$(".question-title").html(question);
+
+	//sets question image
+	var questionImageSrc = questions[nextQuestionIndex].questionImage;
+	$(".question-image").attr("src", questionImageSrc);
+
+	//sets question options
 	$(".question-answers").empty();
 	for(var i = 0; i < options.length; i++){
 		var correctAnswer = false;
 		if(i == answerIndex){
 			correctAnswer = true;
 		}
-		$(".question-answers").append('<li class="answer-list" data-correct-answer="' + correctAnswer + '">' + options[i] + '</li>');
+		$(".question-answers").append('<li class="option-list" data-correct-answer="' + correctAnswer + '">' + options[i] + '</li>');
 	}
 }
 // shows user's score after quiz is finished
 function showUserScore(){
-	$(".pop-up").hide();
-	$(".all-answers").hide();
-	$(".all-questions").hide();
-	$(".user-score").html("<p>Your score is: " + score + " out of 5</p");
-	$(".score").fadeIn();
+	$(".answer-box").hide();
+	$(".wrapper").hide();
 	$(".number-counter-wrapper").hide();
+	$(".user-score").html("<p>Your score is: " + score + " out of 5</p");
+	$(".score").show();
 }
 // event listener to enable user to click on answer options
-$(".question-answers").on("click", ".answer-list", function(){
+$(".question-answers").on("click", ".option-list", function(){
 	showAnswer($(this).data("correct-answer"));
 })
 // event listener for click on correct/incorrect screen continue button 
-$(".pop-up").on("click", ".continue", function(){
+$(".answer-box").on("click", ".continue", function(){
 	showNextQuestion();
 })
 // event listener for click on restart quiz button at end of quiz

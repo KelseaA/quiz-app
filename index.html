@@ -3,41 +3,52 @@
 <head>
 	<title>Fashion Quiz</title>
 	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<section class="pop-up">
-		<p class="answer-feedback">Correct!</p>
-		<p class="question-info"></p>
-		<button class="continue pointer">Continue</button>
-	</section>
-	<div class="header">
+	<header class="header">
 		<h1>Test your fashion knowledge!</h1>
-	</div>
+	</header>
+
 	<div class="number-counter-wrapper">
 		<p class="number-counter">Question 1 of 5</p>
 	</div>
-	<div class="all-questions">
-		<div class="question">
-			<h2 class="question-title">What does prêt-à-porter mean?</h2>
+	
+	<div class="wrapper">
+		<div class="question-box">
+			<div class="question">
+				<h2 class="question-title">What does prêt-à-porter mean?</h2>
+				<img class="question-image" src="images/question-image1.png" alt="French script text asking if you speak french">
+			</div>
+		</div>
+		<section class="all-answers">
+			<ol type="A" class="question-answers">
+				<li class="option-list">High Fashion</li>
+				<li class="option-list">Ready to Wear</li>
+				<li class="option-list">Fast Fashion</li>
+				<li class="option-list">Made to Order</li>
+			</ol>
+		</section>
+	</div>
+
+	<div class="answer-box">
+		<div class="top-answer">
+			<p class="answer-feedback">Correct!</p>
+			<img class="answer-image" src="images/answer-image1.png" alt="black and white drawing of a shirt on a hanger">
+		</div>
+		<div class="bottom-answer">
+			<p class="answer-info"></p>
+			<button class="continue pointer">Continue</button>
 		</div>
 	</div>
-	<section class="all-answers">
-		<ol type="A" class="question-answers">
-			<li class="answer-list">High Fashion</li>
-			<li class="answer-list">Ready to Wear</li>
-			<li class="answer-list">Fast Fashion</li>
-			<li class="answer-list">Made to Order</li>
-		</ol>
-	</section>
+
 	<section class="score">
 		<p class="congrats-message">Congrats! You finished!</p>
 		<p class="user-score">Your score is: </p>
 		<button class="pointer restart-quiz">Retake Quiz</button>
 	</section>
-	<footer>
-		<p>Image by Katie Rodger's Paper Fashion</p>
-	</footer>
+
 	<script src="http://code.jquery.com/jquery.min.js"></script>
 	<script src="js/app.js"></script>
 </body>
