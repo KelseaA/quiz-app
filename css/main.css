@@ -228,3 +228,45 @@ li:hover{
 		font-size: 1.1em;
 	}
 }
+@media only screen and (max-width: 400px){
+	.number-counter-wrapper{
+		width: 20em;
+	}
+	.wrapper, .answer-box{
+		width: 20em;
+	}
+	.wrapper, .answer-box{
+		height: 37.25em;
+	}
+	.question-box{
+		height: 23em;
+	}
+	.question-box, .question-image, .question-answers, .score{
+		width: 18em;
+	}
+	.top-answer{
+		height: 22em;
+	}
+	.question-image{
+		width: 23em;
+		top: -.75em;
+	}
+	.answer-image{
+		height: 28em;
+		top: -1.7em;
+		left: -2em;
+	}
+	.continue{
+		left: 4.75em;
+	}
+	.congrats-message{
+		margin-top: 5em;
+		font-size: 1.5em;
+	}
+	.user-score{
+		font-size: 1.25em;
+	}
+	.answer-info{
+		font-size: 1.1em;
+	}
+}
