@@ -138,15 +138,6 @@ li:hover{
 .question-box, .question-image, .question-answers, .score{
 	width: 30em;
 }
-
-/*score box styling*/
-/*.score{
-	border: double 1em #AB965D;
-	width: 32em;
-	height: 39.25em;
-	margin-top: 3.5em;
-	position: relative;
-}*/
 .congrats-message, .user-score{
 	font-size: 2em;
 	padding-top: 1.5em;
@@ -171,6 +162,57 @@ li:hover{
 
 
 /*media queries*/
-@media only screen and (max-width: 1010px){
-
+@media only screen and (max-width: 540px){
+	.number-counter-wrapper{
+		width: 26em;
+	}
+	.wrapper, .answer-box{
+		width: 26em;
+	}
+	.question-box, .question-image, .question-answers, .score{
+		width: 24em;
+	}
+	.question-image{
+		top: -1em;
+	}
+	.answer-image{
+		left: -1em;
+	}
+	.continue{
+		left: 6.75em;
+	}
+}
+@media only screen and (max-width: 460px){
+	h1{
+		font-size: 1.5em;
+	}
+	.number-counter-wrapper{
+		width: 23em;
+	}
+	.wrapper, .answer-box{
+		width: 23em;
+	}
+	.question-box, .question-image, .question-answers, .score{
+		width: 21em;
+	}
+	.question-image{
+		top: 2em;
+	}
+	.answer-image{
+		left: -2.5em;
+	}
+	.continue{
+		left: 5.75em;
+		padding: .5em;
+	}
+	.congrats-message{
+		margin-top: 5em;
+		font-size: 1.5em;
+	}
+	.user-score{
+		font-size: 1.25em;
+	}
+	.answer-info{
+		font-size: 1.1em;
+	}
 }
