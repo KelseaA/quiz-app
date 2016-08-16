@@ -110,7 +110,7 @@ li:hover{
 .answer-image{
 	position: absolute;
 	height: 33em;
-	top: -2em;
+	top: -2.8em;
 	left: 2em;
 	z-index: -1;
 }
@@ -138,6 +138,9 @@ li:hover{
 .question-box, .question-image, .question-answers, .score{
 	width: 30em;
 }
+.score{
+	margin-top: 2em;
+}
 .congrats-message, .user-score{
 	font-size: 2em;
 	padding-top: 1.5em;
@@ -164,46 +167,55 @@ li:hover{
 /*media queries*/
 @media only screen and (max-width: 540px){
 	.number-counter-wrapper{
-		width: 26em;
+		width: 25em;
 	}
 	.wrapper, .answer-box{
-		width: 26em;
+		width: 25em;
 	}
 	.question-box, .question-image, .question-answers, .score{
-		width: 24em;
+		width: 23em;
 	}
 	.question-image{
-		top: -1em;
+		width: 27em;
+		left: -2em;
+		top: -2em;
 	}
 	.answer-image{
-		left: -1em;
+		top: -2.85em;
+		left: -1.5em;
 	}
 	.continue{
-		left: 6.75em;
+		left: 6.25em;
+		padding: .5em;
 	}
 }
 @media only screen and (max-width: 460px){
-	h1{
-		font-size: 1.5em;
+	body{
+		padding: .25em;
+	}
+	.header{
+		display: none;
 	}
 	.number-counter-wrapper{
-		width: 23em;
+		width: 22.5em;
 	}
 	.wrapper, .answer-box{
-		width: 23em;
+		width: 22.5em;
 	}
 	.question-box, .question-image, .question-answers, .score{
-		width: 21em;
+		width: 20.5em;
 	}
 	.question-image{
-		top: 2em;
+		width: 25.5em;
+		left: -2.5em;
+		top: -1em;
 	}
 	.answer-image{
+		top: -2.75em;
 		left: -2.5em;
 	}
 	.continue{
-		left: 5.75em;
-		padding: .5em;
+		left: 5.5em;
 	}
 	.congrats-message{
 		margin-top: 5em;
