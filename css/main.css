@@ -1,5 +1,10 @@
 * { 
-	margin:0; padding:0; box-sizing:border-box;
+	margin: 0 auto;
+	padding: 0; 
+	box-sizing: border-box;
+}
+*:focus{
+	outline: none;
 }
 html {
 	overflow: -moz-scrollbars-vertical; 
@@ -10,73 +15,72 @@ body{
 	color: #333;
 	text-align: center;
 	line-height: 1.75em;
+	font-family: 'Libre Franklin', sans-serif;
 }
-.pop-up-open{
-	overflow: hidden;
+
+.pointer{
+	cursor: pointer;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
-.pop-up{
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	display: none;
-	background-color: #fff;
-}
-.answer-feedback{
-	font-size: 3em;
-	padding-top: 5.5em;
-	margin-bottom: 1em;
-}
-.question-info{
-	font-size: 1.25em;
-}
-.continue{
-	border: none;
-	background-color: #EBE3D7;
-	font-size: 1.25em;
-	padding: .75em;
-	border-radius: 25px;
-	margin-top: 2em;
-}
-.continue:hover{
-	background-color: #DE667D;
-}
+
+/*header styling*/
 h1{
-	font-size: 2.5em;
+	font-size: 1.75em;
 	color: #F7F4ED;
 	background: #333;
-	height: 2.5em;
-	padding: .6em 0;
+	height: 2.25em;
+	padding: .5em 0;
 	margin-bottom: 1em;
 	border-bottom: solid .25em #DE667D;
 }
+
+/*counter info styling*/
 .number-counter-wrapper{
-	width: 40%;
-	margin: 0 auto;
+	width: 32em;
 }
 .number-counter {
     text-align: right;
 }
-.all-questions{
-	margin: 0 auto;
-	width: 40%;
-	padding: 10em 0;
-	background-image: url("../images/fashion.jpg");
-	background-repeat: none;
-	background-size: cover;
+
+/*question and question image styling*/
+.wrapper, .answer-box{
+	border: double 1em #AB965D;
+	width: 32em;
+	height: 39.25em;
+	position: relative;
 }
-h2{
+.question-box{
+	height: 25em;
+}
+.question{
+	position: relative;
+}
+.question-title{
 	background: rgba(247, 244, 237, .9);
 	padding: .75em 0;
-	font-size: 1.75em;
+	font-size: 1.5em;
 }
+.question-title, .top-answer{
+	border-bottom: 4px solid #AB965D;
+}
+.question-image{
+	position: absolute;
+	top: -4em;
+	left: 0;
+	z-index: -1;
+}
+
+/*question options styling*/
 .question-answers{
-	width: 40%;
-	margin: 0 auto;
-	margin-top: 1em;
+	border-top: 4px solid #AB965D;
 }
 li{
 	background: #F7F4ED;
-	font-size: 1.5em;
+	font-size: 1.25em;
 	padding: .5em;
   	list-style-position: inside;
   	text-align: left;
@@ -86,72 +90,129 @@ li:before{
 	padding-left: 1em;
 }
 li:nth-child(odd) {
-	background-color: #EBE3D7;
+	background-color: #fff;
 }
 li:hover{
 	background-color: #DE667D;
 }
-footer{
-	color: #F7F4ED;
-	background: #333;
-	height: 2.5em;
-	padding: .6em 0;
-	margin-top: 3em;
-	border-top: solid .25em #DE667D;
+
+/*answer image, feedback, and info styling*/
+.answer-box{
+	height: 39.25em;
 }
-.score{
-	background-color: #F7F4ED;
-	width: 40%;
-	margin: 0 auto;
-	display: none;
+.top-answer{
+	height: 25em;
+}
+.answer-feedback{
+	font-size: 2em;
+	padding-top: .5em;
+}
+.answer-image{
+	position: absolute;
+	height: 33em;
+	top: -2em;
+	left: 2em;
+	z-index: -1;
+}
+.answer-info{
+	margin-top: 1em;
+	font-size: 1.25em;
+	line-height: 1.5em;
+	padding: 0 1em;
+}
+.continue{
+	border: none;
+	background-color: #EBE3D7;
+	font-size: 1.25em;
+	padding: .75em;
+	border-radius: 25px;
+	position: absolute;
+	bottom: .25em;
+	left: 9.25em;
+}
+.continue:hover{
+	background-color: #DE667D;
+}
+
+/*sets width to question and answer boxes and children*/
+.question-box, .question-image, .question-answers, .score{
+	width: 30em;
 }
 .congrats-message, .user-score{
 	font-size: 2em;
 	padding-top: 1.5em;
 	margin-bottom: .75em;
 }
+.congrats-message{
+	margin-top: 4em;
+}
+.user-score{
+	font-size: 1.5em;
+}
 .restart-quiz{
 	border: none;
-	background-color: #EBE3D7;
+	background-color: #fff;
+	color: #DE667D;
 	font-size: 1.25em;
-	padding: .75em;
-	border-radius: 25px;
-	margin-bottom: 4em;
+	margin-top: 2em;
 }
 .restart-quiz:hover{
-	background-color: #DE667D;
-}
-.pointer
-{
-	cursor: pointer;
-	-moz-user-select: none;
-	-khtml-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+	text-decoration: underline;
 }
 
+
 /*media queries*/
-@media only screen and (max-width: 1010px){
-	.all-questions, .number-counter-wrapper, .question-answers, .question-info{
-		width: 70%;
-		margin: 0 auto;
+@media only screen and (max-width: 540px){
+	.number-counter-wrapper{
+		width: 26em;
+	}
+	.wrapper, .answer-box{
+		width: 26em;
+	}
+	.question-box, .question-image, .question-answers, .score{
+		width: 24em;
+	}
+	.question-image{
+		top: -1em;
+	}
+	.answer-image{
+		left: -1em;
+	}
+	.continue{
+		left: 6.75em;
 	}
 }
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 460px){
 	h1{
 		font-size: 1.5em;
 	}
-	h2, li{
+	.number-counter-wrapper{
+		width: 23em;
+	}
+	.wrapper, .answer-box{
+		width: 23em;
+	}
+	.question-box, .question-image, .question-answers, .score{
+		width: 21em;
+	}
+	.question-image{
+		top: 2em;
+	}
+	.answer-image{
+		left: -2.5em;
+	}
+	.continue{
+		left: 5.75em;
+		padding: .5em;
+	}
+	.congrats-message{
+		margin-top: 5em;
+		font-size: 1.5em;
+	}
+	.user-score{
 		font-size: 1.25em;
 	}
-	.all-questions, .number-counter-wrapper, .question-answers, .question-info{
-		width: 90%;
-	}
-	footer{
-		margin-top: 2em;
-	}
-	.score{
-		width: 100%;
+	.answer-info{
+		font-size: 1.1em;
 	}
 }

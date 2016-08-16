@@ -2,33 +2,43 @@
 	"questions": [
 	{
 		"question": "What does prêt-à-porter mean?",
+		"questionImage": "images/question-image1.png",
 		"options": ["High Fashion", "Ready to Wear", "Fast Fashion", "Made to Order"],
+		"answerImage": "images/answer-image1.png",
 		"answerIndex": 1,
-		"info": "Prêt-à-porter is French term for ready to wear, the term for factory made clothing that needs little to no alterations."
+		"info": "Prêt-à-porter is the French term for ready to wear, the term for factory made clothing that needs little to no alterations."
 	},
 	{
 		"question": "Which designer is famous for the wrap dress?",
+		"questionImage": "images/question-image2.png",
 		"options": ["Nina Ricci", "Cynthia Rowley", "Diane Von Furstenberg", "Nanette Lepore"],
+		"answerImage": "images/answer-image2.png",
 		"answerIndex": 2,
-		"info": "Diane von Furstenberg first introduced the knitted jersey wrap dress in 1974."
+		"info": "Diane von Furstenberg first introduced the knit jersey wrap dress in 1974."
 	},
 	{
 		"question": "Who designed the cone bra that Madonna wore?",
+		"questionImage": "images/question-image3.png",
 		"options": ["Jean Paul Gaultier", "Pierre Cardin", "Vivienne Westwood", "Martin Margiela"],
+		"answerImage": "images/answer-image3.png",
 		"answerIndex": 0,
-		"info": "Gaultier produced many costumes for Madonna during the nineties, starting with her infamous cone bra for her 1990 Blond Ambition World Tour."
+		"info": "Gaultier produced many costumes for Madonna, starting with her famous cone bra for her 1990 Blond Ambition World Tour."
 	},
 	{
 		"question": "Who is the current designer for Chanel?",
+		"questionImage": "images/question-image4.png",
 		"options": ["Helmut Lang", "Karl Lagerfeld", "Alexander Wang", "Raf Simons"],
+		"answerImage": "images/answer-image4.png",
 		"answerIndex": 1,
 		"info": "Lagerfeld has designed for Chanel since 1983."
 	},
 	{
 		"question": "Who invented the LBD?",
+		"questionImage": "images/question-image5.png",
 		"options": ["Karl Lagerfeld", "Elsa Schiaparelli", "Donna Karen", "Coco Chanel"],
+		"answerImage": "images/answer-image5.png",
 		"answerIndex": 3,
-		"info": "The concept of the little black dress is often cited as one of Coco Chanel's contributions to the fashion lexicon."
+		"info": "The concept of the little black dress is cited as one of Coco Chanel's contributions to the fashion lexicon."
 	}
 	]
 }
