@@ -22,7 +22,8 @@ function startQuiz(){
 	questionCounter = 1;
 	$(".answer-box").hide();
 	$(".score").hide();
-	$(".wrapper").show();
+	$(".question-box").show();
+	$(".all-answers").show();
 	$(".number-counter-wrapper").show();
 	showNextQuestion();
 }
@@ -30,6 +31,7 @@ function startQuiz(){
 function showNextQuestion(){
 	$(".wrapper").show();
 	$(".answer-box").hide();
+	// $(".flip-container").flip(false);
 	
 	if(nextQuestionIndex < questions.length){
 		showQuestions(questions[nextQuestionIndex].question, questions[nextQuestionIndex].options, questions[nextQuestionIndex].answerIndex);
@@ -55,14 +57,15 @@ function showAnswer(correct){
 		$(".answer-box").removeClass("answer-box-correct").addClass("answer-box-incorrect");
 		$(".answer-feedback").text("Incorrect!");
 	}
-
-	nextQuestionIndex++;
 	
 	var questionInfo = questions[nextQuestionIndex].info;
 	$(".answer-info").html(questionInfo);
 
 	$(".wrapper").hide();
 	$(".answer-box").show();
+	// $(".flip-container").flip(true);
+
+	nextQuestionIndex++;
 }
 // shows questions on page
 function showQuestions(question, options, answerIndex){
@@ -86,18 +89,27 @@ function showQuestions(question, options, answerIndex){
 // shows user's score after quiz is finished
 function showUserScore(){
 	$(".answer-box").hide();
-	$(".wrapper").hide();
+	$(".question-box").hide();
+	$(".all-answers").hide();
 	$(".number-counter-wrapper").hide();
 	$(".user-score").html("<p>Your score is: " + score + " out of 5</p");
 	$(".score").show();
 }
+
+
+function flip() {
+    $(".card").toggleClass("flipped");
+}
+
 // event listener to enable user to click on answer options
 $(".question-answers").on("click", ".option-list", function(){
 	showAnswer($(this).data("correct-answer"));
+	flip();
 })
 // event listener for click on correct/incorrect screen continue button 
 $(".answer-box").on("click", ".continue", function(){
 	showNextQuestion();
+	flip();
 })
 // event listener for click on restart quiz button at end of quiz
 $(".score").on("click", ".restart-quiz", function(){

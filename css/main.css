@@ -50,6 +50,7 @@ h1{
 .wrapper, .answer-box{
 	border: double 1em #AB965D;
 	width: 32em;
+	height: 39.25em;
 	position: relative;
 }
 .question-box{
@@ -97,8 +98,7 @@ li:hover{
 
 /*answer image, feedback, and info styling*/
 .answer-box{
-	height: 40em;
-	display: none;
+	height: 39.25em;
 }
 .top-answer{
 	height: 25em;
@@ -140,19 +140,20 @@ li:hover{
 }
 
 /*score box styling*/
-.score{
+/*.score{
 	border: double 1em #AB965D;
 	width: 32em;
-	height: 40em;
+	height: 39.25em;
+	margin-top: 3.5em;
 	position: relative;
-}
+}*/
 .congrats-message, .user-score{
 	font-size: 2em;
 	padding-top: 1.5em;
 	margin-bottom: .75em;
 }
 .congrats-message{
-	margin-top: 5em;
+	margin-top: 4em;
 }
 .user-score{
 	font-size: 1.5em;
@@ -162,6 +163,7 @@ li:hover{
 	background-color: #fff;
 	color: #DE667D;
 	font-size: 1.25em;
+	margin-top: 2em;
 }
 .restart-quiz:hover{
 	text-decoration: underline;
